@@ -1,38 +1,70 @@
 .App {
-  text-align: center;
+    background: linear-gradient(90deg, #aa25f8, #00f3ff);
+    padding-bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.premier, .league {
+    font-size: 50px;
+    font-weight: bolder;
+    color: #360d3a;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.table {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 5px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.x {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid black;
+    padding: 5px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.table-info, .table-points {
+    display: flex;
+    align-items: center;    
+}
+
+.position, 
+.points, 
+.games, 
+.win,
+.draw,  
+.lose,
+.w {
+    font-size: 20px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.team-name {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 3px 10px;
+}
+
+.team-icon {
+    margin-left: 10px;
 }

@@ -3,15 +3,19 @@ import "./App.css";
 import logo from "./img/premier-league-logo.svg";
 
 function App() {
-  const [teams, setTeams] = useState([]);
+  const [league, setleague] = useState([]);
 
   fetch(
     "https://apiv2.apifootball.com/?action=get_standings&league_id=148&APIkey=8ae3335bc62c47e82cc2f25563d77afc32533d4cc114dbad15271a8fe38bc766"
   )
     .then((data) => data.json())
-    .then((data) => {
-      setTeams(data);
+    .then((league) => {
+      setleague(league);
     });
+
+  let www = () => {
+    return console.log("Hi");
+  };
 
   return (
     <div className="App">
@@ -29,7 +33,7 @@ function App() {
         <span className="w">P</span>
       </div>
 
-      {teams.map((el) => {
+      {league.map((el) => {
         return (
           <div key={el.team_id} className="table">
             <div className="table-info">
@@ -42,7 +46,12 @@ function App() {
                 src={el.team_badge}
               />
 
-              <div className="team-name">{el.team_name}</div>
+              <div
+                className="team-name"
+                onClick={() => console.log(el.team_id)}
+              >
+                {el.team_name}
+              </div>
             </div>
 
             <div className="table-points">

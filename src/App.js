@@ -13,10 +13,6 @@ function App() {
       setleague(league);
     });
 
-  let www = () => {
-    return console.log("Hi");
-  };
-
   return (
     <div className="App">
       <div className="title">
